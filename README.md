@@ -32,3 +32,9 @@ This is a React-based shopping cart application that allows users to browse prod
    ```bash
    git clone https://github.com/shubhitaran91/ShoppingWebsite.git
    cd shopping-cart
+
+2. Install Dependencies
+   npm install
+
+3. Start the development server:
+   npm start
