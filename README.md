@@ -38,3 +38,6 @@ This is a React-based shopping cart application that allows users to browse prod
 
 3. Start the development server:
    npm start
+
+4. Web URL
+   https://shopping-a0e82.web.app/
