@@ -1,8 +1,11 @@
 import { useDispatch } from "react-redux";
 import { addItems } from "../utils/cartSlice";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ShoppingCard = (props) => {
   const dispatch = useDispatch();
+  const [isExpanded, setIsExpanded] = useState(false);
   const { resData } = props;
 
   const { image, description, price, title } = resData;
@@ -20,7 +23,8 @@ return (
 
         <h3 className="font-bold py-4 text-lg">{title}</h3>
         <div className="flex flex-col gap-2">
-          <h4>{description}</h4>
+          <h4>{isExpanded ? description : `${description.substring(0,100)}...`}<Link className="text-blue-500" onClick={() => setIsExpanded(!isExpanded)}>{isExpanded ? "Read Less" : "Read More"}</Link></h4>
+
         </div>
         <div className="flex justify-between items-center mt-auto">
           <h4 className="text-lg font-semibold">${price}</h4>
